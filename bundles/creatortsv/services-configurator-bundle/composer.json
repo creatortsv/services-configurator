@@ -1,0 +1,34 @@
+{
+    "name": "creatortsv/services-configurator-bundle",
+    "version": "0.1.0",
+    "type": "symfony-bundle",
+    "description": "Services configurator bundle",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Creatortsv\\ServicesConfiguratorBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Creatortsv\\ServicesConfiguratorBundle\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test" : "./vendor/bin/phpunit"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "5.3.*"
+        }
+    }
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4850ba427863fb7b7fb3bc5b4f25e458",
+    "content-hash": "6e59c12743fe45b7d584766cc8705ffc",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -74,6 +74,47 @@
                 }
             ],
             "time": "2020-11-11T10:22:58+00:00"
+        },
+        {
+            "name": "creatortsv/services-configurator-bundle",
+            "version": "0.1.0",
+            "dist": {
+                "type": "path",
+                "url": "./bundles/creatortsv/services-configurator-bundle",
+                "reference": "4e318b24bf63b2f0359a2d9ff5ead81c84115a9c"
+            },
+            "require": {
+                "php": "^7.4"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "symfony": {
+                    "allow-contrib": false,
+                    "require": "5.3.*"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Creatortsv\\ServicesConfiguratorBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Creatortsv\\ServicesConfiguratorBundle\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "./vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Services configurator bundle",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "doctrine/annotations",

@@ -8,6 +8,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "composer/package-versions-deprecated": "1.11.99.1",
+        "creatortsv/services-configurator-bundle": "^0.1.0",
         "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.3",
         "doctrine/doctrine-migrations-bundle": "^3.1",
@@ -46,7 +47,7 @@
         "symfony/browser-kit": "^5.2",
         "symfony/css-selector": "^5.2",
         "symfony/debug-bundle": "^5.2",
-        "symfony/maker-bundle": "^1.0",
+        "symfony/maker-bundle": "^1.30",
         "symfony/phpunit-bridge": "^5.2",
         "symfony/stopwatch": "^5.2",
         "symfony/var-dumper": "^5.2",
@@ -94,5 +95,11 @@
             "allow-contrib": false,
             "require": "5.2.*"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type" : "path",
+            "url" : "./bundles/creatortsv/services-configurator-bundle"
+        }
+    ]
 }
