@@ -1,0 +1,19 @@
+services:
+
+  _defaults:
+
+    autowire: true
+    autoconfigure: true
+
+  Creatortsv\ServicesConfiguratorBundle\Services\:
+    resource: '../src/Services/*'
+    exclude: '../src/Services/{ServiceInterface.php}'
+
+  Creatortsv\ServicesConfiguratorBundle\Services\ServiceManager:
+
+    public: true
+    arguments:
+      
+      - '@Creatortsv\ServicesConfiguratorBundle\Services\ApiService'
+      - '@Creatortsv\ServicesConfiguratorBundle\Services\HttpService'
+      - '@Creatortsv\ServicesConfiguratorBundle\Services\GrpcService'
