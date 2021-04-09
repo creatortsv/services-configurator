@@ -85,7 +85,8 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "test": "./bin/phpunit -v --testdox --colors=always --coverage-html output/test/coverage.html"
     },
     "conflict": {
         "symfony/symfony": "*"

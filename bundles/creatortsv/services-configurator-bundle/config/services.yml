@@ -7,13 +7,9 @@ services:
 
   Creatortsv\ServicesConfiguratorBundle\Services\:
     resource: '../src/Services/*'
-    exclude: '../src/Services/{ServiceInterface.php}'
 
-  Creatortsv\ServicesConfiguratorBundle\Services\ServiceManager:
-
-    public: true
-    arguments:
-      
-      - '@Creatortsv\ServicesConfiguratorBundle\Services\ApiService'
-      - '@Creatortsv\ServicesConfiguratorBundle\Services\HttpService'
-      - '@Creatortsv\ServicesConfiguratorBundle\Services\GrpcService'
+  Creatortsv\ServicesConfiguratorBundle\Services\ServiceInterface:
+        factory: '@?Creatortsv\ServicesConfiguratorBundle\Services\ServiceFactory'
+        arguments: 
+          - '@Symfony\Component\HttpFoundation\RequestStack'
+          - '@service_container'

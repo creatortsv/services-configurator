@@ -29,3 +29,20 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    # [ CREATORTSV SERVICES CONFIGURATOR: START ]
+    App\Services\:
+        resource: '../src/Services/'
+
+    app.api.service:
+        class: App\Services\ApiConnectionService
+        public: true # Required
+        arguments:
+            - 'https://%env(resolve:SERVICE_API_HOST)%:%env(resolve:SERVICE_API_PORT)%/'
+
+    app.http.service:
+        class: App\Services\HttpConnectionService
+        public: true # Required
+        arguments:
+            - 'https://%env(resolve:SERVICE_HTTP_URL)%/'
+        
